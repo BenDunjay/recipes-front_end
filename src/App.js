@@ -1,16 +1,17 @@
-import React from "react";
-import API from "./API";
+import React, { useState } from "react";
+
 import "./App.css";
 
 function App() {
-  const test = (user) => {
-    API.getUsersRecipes(user).then((data) => console.log(data));
-    console.log();
+  const [userLogin, setUserLogin] = useState(false);
+
+  const changeUserState = () => {
+    setUserLogin(!userLogin);
   };
 
   return (
     <div className="App">
-      <button onClick={test}></button>
+      <button onClick={changeUserState}> </button>
     </div>
   );
 }

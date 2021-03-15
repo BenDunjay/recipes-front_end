@@ -19,7 +19,7 @@ const get = (url) => {
 };
 
 const getUsersRecipes = (user) => {
-  return get(allUserRecipes(6));
+  return get(allUserRecipes(user.id));
 };
 
 export default { getUsersRecipes };
