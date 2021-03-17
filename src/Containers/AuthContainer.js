@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 
-import NavBar from "./NavBar";
-
 function AuthContainer() {
-  return (
-    <div>
-      AuthContainer
-      <NavBar />
-    </div>
-  );
+  return <div>AuthContainer</div>;
 }
 
 export default AuthContainer;

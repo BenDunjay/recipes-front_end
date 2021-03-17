@@ -4,6 +4,7 @@ import "./App.css";
 import LoginButton from "./Components/LoginButton";
 import AuthContainer from "./Containers/AuthContainer";
 import HomeContainer from "./Containers/HomeContainer";
+import NavBar from "./Containers/NavBar";
 
 function App() {
   const [userLogin, setUserLogin] = useState(false);
@@ -14,8 +15,9 @@ function App() {
 
   return (
     <div className="App">
-      <LoginButton changeLoginState={changeUserLogin} />
-      {userLogin ? <AuthContainer /> : <HomeContainer userState={userLogin} />}
+      {/* <LoginButton changeLoginState={changeUserLogin} /> */}
+      <NavBar userStateLogin={changeUserLogin} />
+      {userLogin ? <AuthContainer /> : <HomeContainer />}
     </div>
   );
 }
