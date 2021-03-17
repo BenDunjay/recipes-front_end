@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 
 import "./App.css";
+import LoginButton from "./Components/LoginButton";
+import AuthContainer from "./Containers/AuthContainer";
+import HomeContainer from "./Containers/HomeContainer";
 
 function App() {
   const [userLogin, setUserLogin] = useState(false);
 
-  const changeUserState = () => {
+  const changeUserLogin = () => {
     setUserLogin(!userLogin);
   };
 
   return (
     <div className="App">
-      <button onClick={changeUserState}> </button>
+      <LoginButton changeLoginState={changeUserLogin} />
+      {userLogin ? <AuthContainer /> : <HomeContainer userState={userLogin} />}
     </div>
   );
 }
-
 export default App;
